@@ -11,6 +11,15 @@
 		EC4748532A505F0D001D23AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748522A505F0D001D23AD /* ContentView.swift */; };
 		EC4748552A505F0E001D23AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4748542A505F0E001D23AD /* Assets.xcassets */; };
 		EC4748582A505F0E001D23AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4748572A505F0E001D23AD /* Preview Assets.xcassets */; };
+		EC4748602A506107001D23AD /* BirdHuntView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC47485F2A506107001D23AD /* BirdHuntView.swift */; };
+		EC4748622A506131001D23AD /* DanuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748612A506131001D23AD /* DanuView.swift */; };
+		EC4748652A50615C001D23AD /* DanuGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748642A50615C001D23AD /* DanuGameScene.swift */; };
+		EC4748672A506183001D23AD /* BirdHuntScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748662A506183001D23AD /* BirdHuntScene.swift */; };
+		EC47486A2A506205001D23AD /* FireExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC4748692A506205001D23AD /* FireExplosion.sks */; };
+		EC47486D2A50630A001D23AD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC47486C2A50630A001D23AD /* Helper.swift */; };
+		EC47486F2A506352001D23AD /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC47486E2A506352001D23AD /* MyParticle.sks */; };
+		EC4748712A5063D7001D23AD /* FinishGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748702A5063D7001D23AD /* FinishGameView.swift */; };
+		EC4748732A50642D001D23AD /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748722A50642D001D23AD /* NewGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		EC4748522A505F0D001D23AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC4748542A505F0E001D23AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC4748572A505F0E001D23AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC47485F2A506107001D23AD /* BirdHuntView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdHuntView.swift; sourceTree = "<group>"; };
+		EC4748612A506131001D23AD /* DanuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanuView.swift; sourceTree = "<group>"; };
+		EC4748642A50615C001D23AD /* DanuGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanuGameScene.swift; sourceTree = "<group>"; };
+		EC4748662A506183001D23AD /* BirdHuntScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdHuntScene.swift; sourceTree = "<group>"; };
+		EC4748692A506205001D23AD /* FireExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireExplosion.sks; sourceTree = "<group>"; };
+		EC47486C2A50630A001D23AD /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		EC47486E2A506352001D23AD /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		EC4748702A5063D7001D23AD /* FinishGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGameView.swift; sourceTree = "<group>"; };
+		EC4748722A50642D001D23AD /* NewGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +69,15 @@
 		EC47484F2A505F0D001D23AD /* SpriteKitExhibition */ = {
 			isa = PBXGroup;
 			children = (
+				EC47486B2A5062F4001D23AD /* Helpers */,
+				EC4748632A506146001D23AD /* Game */,
+				EC47485E2A5060E3001D23AD /* View */,
 				EC4748502A505F0D001D23AD /* SpriteKitExhibitionApp.swift */,
 				EC4748522A505F0D001D23AD /* ContentView.swift */,
 				EC4748542A505F0E001D23AD /* Assets.xcassets */,
 				EC4748562A505F0E001D23AD /* Preview Content */,
+				EC4748692A506205001D23AD /* FireExplosion.sks */,
+				EC47486E2A506352001D23AD /* MyParticle.sks */,
 			);
 			path = SpriteKitExhibition;
 			sourceTree = "<group>";
@@ -65,6 +88,34 @@
 				EC4748572A505F0E001D23AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC47485E2A5060E3001D23AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC47485F2A506107001D23AD /* BirdHuntView.swift */,
+				EC4748612A506131001D23AD /* DanuView.swift */,
+				EC4748702A5063D7001D23AD /* FinishGameView.swift */,
+				EC4748722A50642D001D23AD /* NewGameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC4748632A506146001D23AD /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				EC4748642A50615C001D23AD /* DanuGameScene.swift */,
+				EC4748662A506183001D23AD /* BirdHuntScene.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		EC47486B2A5062F4001D23AD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EC47486C2A50630A001D23AD /* Helper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +178,8 @@
 			files = (
 				EC4748582A505F0E001D23AD /* Preview Assets.xcassets in Resources */,
 				EC4748552A505F0E001D23AD /* Assets.xcassets in Resources */,
+				EC47486A2A506205001D23AD /* FireExplosion.sks in Resources */,
+				EC47486F2A506352001D23AD /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4748672A506183001D23AD /* BirdHuntScene.swift in Sources */,
+				EC47486D2A50630A001D23AD /* Helper.swift in Sources */,
+				EC4748622A506131001D23AD /* DanuView.swift in Sources */,
 				EC4748532A505F0D001D23AD /* ContentView.swift in Sources */,
+				EC4748652A50615C001D23AD /* DanuGameScene.swift in Sources */,
+				EC4748732A50642D001D23AD /* NewGameView.swift in Sources */,
+				EC4748712A5063D7001D23AD /* FinishGameView.swift in Sources */,
 				EC4748512A505F0D001D23AD /* SpriteKitExhibitionApp.swift in Sources */,
+				EC4748602A506107001D23AD /* BirdHuntView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
