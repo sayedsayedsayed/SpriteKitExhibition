@@ -36,8 +36,8 @@ struct NewGameView: View {
                             NavigationLink("Asadi"){
                                 DanuView()
                                     .onAppear {
-                                        let hostingController = HostingController(rootView: DanuView())
-                                        UIApplication.shared.windows.first?.rootViewController = hostingController
+//                                        let hostingController = HostingController(rootView: DanuView())
+//                                        UIApplication.shared.windows.first?.rootViewController = hostingController
                                     }
                             }
                                 .font(.largeTitle)
@@ -49,6 +49,9 @@ struct NewGameView: View {
             .ignoresSafeArea()
             .navigationBarBackButtonHidden()
             .onAppear{
+                SoundManager.instance.BirdHuntStopBGSound()
+                SoundManager.instance.GameOverStopSound()
+                
                 SoundManager.instance.OBPlayBGSound()
             }
         }

@@ -97,6 +97,11 @@ struct FinishGameView: View {
             }
             .background(.black)
             .ignoresSafeArea()
+            .onAppear{
+                SoundManager.instance.BirdHuntStopBGSound()
+                SoundManager.instance.OBStopBGSound()
+                SoundManager.instance.GameOverPlaySound()
+            }
         }
         .navigationBarBackButtonHidden()
     }

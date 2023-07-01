@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import AVKit
+import AVFoundation
 
 class SoundManager{
     static let instance = SoundManager()
@@ -14,7 +14,7 @@ class SoundManager{
     var player : AVAudioPlayer?
     
     func OBPlayBGSound(){
-        guard let url = Bundle.main.url(forResource: "onboardingBGM", withExtension: ".mp3") else {return}
+        guard let url = Bundle.main.url(forResource: "onboarding-BGM", withExtension: ".mp3") else {return}
         
         do{
             player = try AVAudioPlayer(contentsOf:url)
@@ -26,7 +26,7 @@ class SoundManager{
     }
     
     func OBStopBGSound(){
-        guard let url = Bundle.main.url(forResource: "onboardingBGM", withExtension: ".mp3") else {return}
+        guard let url = Bundle.main.url(forResource: "onboarding-BGM", withExtension: ".mp3") else {return}
         
         do{
             player = try AVAudioPlayer(contentsOf:url)
@@ -37,7 +37,11 @@ class SoundManager{
     }
     
     func BirdHuntPlayBGSound(){
-        guard let url = Bundle.main.url(forResource: "birdHunt-BGM", withExtension: ".wav") else {return}
+        guard let url = Bundle.main.url(forResource: "birdHunt-BGM", withExtension: "wav")
+        else {
+            print("semfax")
+            return
+        }
         
         do{
             player = try AVAudioPlayer(contentsOf:url)
@@ -59,7 +63,7 @@ class SoundManager{
         }
     }
     
-    func PlayGameOverSound(){
+    func GameOverPlaySound(){
         guard let url = Bundle.main.url(forResource: "game-over", withExtension: ".mp3") else {return}
         
         do{
@@ -71,7 +75,7 @@ class SoundManager{
         }
     }
     
-    func StopGameOverSound(){
+    func GameOverStopSound(){
         guard let url = Bundle.main.url(forResource: "game-over", withExtension: ".mp3") else {return}
         
         do{

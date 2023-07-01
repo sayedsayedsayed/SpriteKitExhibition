@@ -7,6 +7,7 @@
 
 import Foundation
 import SpriteKit
+import AVFoundation
 
 enum Direction {
     case right
@@ -16,6 +17,8 @@ enum Direction {
 class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     
     @Published var gameOver = false
+    
+    var collisionSound: AVAudioPlayer?
     
     var timerLabel: SKLabelNode!
     var timer = Timer()
@@ -68,6 +71,15 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         background.zPosition = 1
         
         addChild(background)
+        
+        if let soundFileURL = Bundle.main.url(forResource: "gunshot", withExtension: "mp3") {
+            do {
+                collisionSound = try AVAudioPlayer(contentsOf: soundFileURL)
+                collisionSound?.prepareToPlay()
+            } catch {
+                print("Error loading collision sound: \(error)")
+            }
+        }
         
         makeCannon()
         draggableNode = cannon
@@ -302,6 +314,7 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         if (contactA.categoryBitMask == CBitMask.t1 || contactA.categoryBitMask == CBitMask.t2 || contactA.categoryBitMask == CBitMask.t3 || contactA.categoryBitMask == CBitMask.t4) && contactB.categoryBitMask == CBitMask.ball{
 
             makeExplosion(contactA: contactA, contactB: contactB)
+            collisionSound?.play()
             
             contactA.node?.removeFromParent()
             contactB.node?.removeFromParent()
@@ -310,7 +323,6 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
             
             if contactA.categoryBitMask == currentTarget.physicsBody?.categoryBitMask {
                 updateScore(add: true)
-                
             }
             else {
                 updateScore(add: false)
@@ -325,10 +337,10 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         //ball hit border
         if contactA.categoryBitMask == CBitMask.ball && contactB.categoryBitMask == CBitMask.frame{
             makeExplosion(contactA: contactA, contactB: contactB)
+            collisionSound?.play()
             
             ball.removeFromParent() // Remove the ball from the scene
             hasShoot = false
-            updateScore(add: false)
         }
         
     }

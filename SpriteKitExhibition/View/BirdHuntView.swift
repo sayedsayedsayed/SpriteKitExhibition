@@ -8,7 +8,6 @@
 import SwiftUI
 import SpriteKit
 
-
 var spriteScene: SKScene {
     let scene = BirdHuntScene()
     return scene
@@ -22,7 +21,10 @@ struct BirdHuntView: View {
                 SpriteView(scene: scene)
                     .ignoresSafeArea()
                     .onAppear{
-                          SoundManager.instance.BirdHuntPlayBGSound()
+                        SoundManager.instance.BirdHuntStopBGSound()
+                        SoundManager.instance.OBStopBGSound()
+                        
+                        SoundManager.instance.BirdHuntPlayBGSound()
                     }
                 
                 if scene.gameOver == true {
