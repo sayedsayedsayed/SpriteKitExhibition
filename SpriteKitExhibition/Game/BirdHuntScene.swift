@@ -70,7 +70,6 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         addChild(background)
         
         makeCannon()
-//        makeBtnFire()
         draggableNode = cannon
         makeTarget1()
         makeTarget2()
@@ -369,7 +368,6 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         
         t1.size = CGSize(width: 75, height: 75)
         
-        t1.position = CGPoint(x: 0.1, y: size.height/2)
         t1.zPosition = 10
         t1.physicsBody = SKPhysicsBody(rectangleOf: t1.size)
         t1.physicsBody?.affectedByGravity = false
@@ -377,10 +375,21 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         t1.physicsBody?.categoryBitMask = CBitMask.t1
         t1.physicsBody?.contactTestBitMask = CBitMask.ball
         t1.physicsBody?.collisionBitMask = CBitMask.ball
+        
+        var startFrom: Direction = .left
+        t1.position = CGPoint(x: 0.1, y: size.height/2)
+        
+        let rand = Int.random(in: 1...2)
+        
+        if rand == 1 {
+            startFrom = .right
+            t1.position = CGPoint(x: size.width, y: size.height/2)
+        }
+        
         addChild(t1)
         makeAnimation(obj: t1, objName: objName, objCount: 6)
         
-        startRandomMovement(obj: t1, startFrom: .left)
+        startRandomMovement(obj: t1, startFrom: startFrom)
 
     }
     
@@ -390,7 +399,6 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         
         t2.size = CGSize(width: 75, height: 75)
         
-        t2.position = CGPoint(x: size.width, y: size.height/2)
         t2.zPosition = 10
         t2.physicsBody = SKPhysicsBody(rectangleOf: t2.size)
         t2.physicsBody?.affectedByGravity = false
@@ -398,10 +406,21 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         t2.physicsBody?.categoryBitMask = CBitMask.t2
         t2.physicsBody?.contactTestBitMask = CBitMask.ball
         t2.physicsBody?.collisionBitMask = CBitMask.ball
+        
+        var startFrom: Direction = .left
+        t2.position = CGPoint(x: 0.1, y: size.height/2)
+        
+        let rand = Int.random(in: 1...2)
+        
+        if rand == 1 {
+            startFrom = .right
+            t2.position = CGPoint(x: size.width, y: size.height/2)
+        }
+        
         addChild(t2)
         makeAnimation(obj: t2, objName: objName, objCount: 8)
         
-        startRandomMovement(obj: t2, startFrom: .right)
+        startRandomMovement(obj: t2, startFrom: startFrom)
 
     }
     
@@ -411,7 +430,7 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         
         t3.size = CGSize(width: 75, height: 75)
         
-        t3.position = CGPoint(x: 0.1, y: size.height/2)
+        
         t3.zPosition = 10
         t3.physicsBody = SKPhysicsBody(rectangleOf: t3.size)
         t3.physicsBody?.affectedByGravity = false
@@ -419,16 +438,19 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         t3.physicsBody?.categoryBitMask = CBitMask.t3
         t3.physicsBody?.contactTestBitMask = CBitMask.ball
         t3.physicsBody?.collisionBitMask = CBitMask.ball
-        addChild(t3)
-        makeAnimation(obj: t3, objName: objName, objCount: 8)
         
         var startFrom: Direction = .left
+        t3.position = CGPoint(x: 0.1, y: size.height/2)
         
         let rand = Int.random(in: 1...2)
         
         if rand == 1 {
             startFrom = .right
+            t3.position = CGPoint(x: size.width, y: size.height/2)
         }
+        
+        addChild(t3)
+        makeAnimation(obj: t3, objName: objName, objCount: 8)
         
         startRandomMovement(obj: t3, startFrom: startFrom)
 
@@ -440,7 +462,6 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         
         t4.size = CGSize(width: 75, height: 75)
         
-        t4.position = CGPoint(x: 0.1, y: size.height/2)
         t4.zPosition = 10
         t4.physicsBody = SKPhysicsBody(rectangleOf: t4.size)
         t4.physicsBody?.affectedByGravity = false
@@ -448,10 +469,21 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         t4.physicsBody?.categoryBitMask = CBitMask.t4
         t4.physicsBody?.contactTestBitMask = CBitMask.ball
         t4.physicsBody?.collisionBitMask = CBitMask.ball
+        
+        var startFrom: Direction = .left
+        t4.position = CGPoint(x: 0.1, y: size.height/2)
+        
+        let rand = Int.random(in: 1...2)
+        
+        if rand == 1 {
+            startFrom = .right
+            t4.position = CGPoint(x: size.width, y: size.height/2)
+        }
+        
         addChild(t4)
         makeAnimation(obj: t4, objName: objName, objCount: 8)
         
-        startRandomMovement(obj: t4, startFrom: .right)
+        startRandomMovement(obj: t4, startFrom: startFrom)
 
     }
     
@@ -581,6 +613,7 @@ class BirdHuntScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         ball.physicsBody?.angularDamping = 0
         ball.physicsBody?.allowsRotation = true
         ball.physicsBody?.isDynamic = true
+        ball.physicsBody?.affectedByGravity = false
         
         ball.physicsBody?.categoryBitMask = CBitMask.ball
         ball.physicsBody?.contactTestBitMask = CBitMask.t1 | CBitMask.frame

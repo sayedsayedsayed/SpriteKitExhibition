@@ -20,6 +20,7 @@
 		EC47486F2A506352001D23AD /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC47486E2A506352001D23AD /* MyParticle.sks */; };
 		EC4748712A5063D7001D23AD /* FinishGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748702A5063D7001D23AD /* FinishGameView.swift */; };
 		EC4748732A50642D001D23AD /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748722A50642D001D23AD /* NewGameView.swift */; };
+		EC4748752A506E12001D23AD /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4748742A506E12001D23AD /* SoundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		EC47486E2A506352001D23AD /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 		EC4748702A5063D7001D23AD /* FinishGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGameView.swift; sourceTree = "<group>"; };
 		EC4748722A50642D001D23AD /* NewGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
+		EC4748742A506E12001D23AD /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				EC47486C2A50630A001D23AD /* Helper.swift */,
+				EC4748742A506E12001D23AD /* SoundManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				EC4748712A5063D7001D23AD /* FinishGameView.swift in Sources */,
 				EC4748512A505F0D001D23AD /* SpriteKitExhibitionApp.swift in Sources */,
 				EC4748602A506107001D23AD /* BirdHuntView.swift in Sources */,
+				EC4748752A506E12001D23AD /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

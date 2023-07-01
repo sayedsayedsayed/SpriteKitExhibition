@@ -22,7 +22,7 @@ struct BirdHuntView: View {
                 SpriteView(scene: scene)
                     .ignoresSafeArea()
                     .onAppear{
-                        //  SoundManager.instance.BirdHuntPlayBGSound()
+                          SoundManager.instance.BirdHuntPlayBGSound()
                     }
                 
                 if scene.gameOver == true {

@@ -43,6 +43,9 @@ struct NewGameView: View {
             }
             .ignoresSafeArea()
             .navigationBarBackButtonHidden()
+            .onAppear{
+                SoundManager.instance.OBPlayBGSound()
+            }
         }
     }
 }
