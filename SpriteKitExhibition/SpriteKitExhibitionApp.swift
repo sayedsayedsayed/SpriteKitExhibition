@@ -11,7 +11,14 @@ import SwiftUI
 struct SpriteKitExhibitionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            BirdHuntView()
+//            DanuView()
+//                .previewInterfaceOrientation(.landscapeLeft)
+//                .onAppear {
+//                    let hostingController = HostingController(rootView: DanuView())
+//                    UIApplication.shared.windows.first?.rootViewController = hostingController
+//                }
         }
     }
 }

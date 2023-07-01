@@ -14,11 +14,22 @@ struct DanuView: View {
     var scene = DanuGameScene()
     
     
+    
     var body: some View {
+        
         VStack{
             SpriteView(scene: scene)
                 .ignoresSafeArea()
         }
+        
+        
+    }
+    
+}
+
+class HostingController<Content>: UIHostingController<Content> where Content: View {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
     }
 }
 

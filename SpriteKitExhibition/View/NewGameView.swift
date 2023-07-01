@@ -35,6 +35,10 @@ struct NewGameView: View {
                         .overlay(
                             NavigationLink("Asadi"){
                                 DanuView()
+                                    .onAppear {
+                                        let hostingController = HostingController(rootView: DanuView())
+                                        UIApplication.shared.windows.first?.rootViewController = hostingController
+                                    }
                             }
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
