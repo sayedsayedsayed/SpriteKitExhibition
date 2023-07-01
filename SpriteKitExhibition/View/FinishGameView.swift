@@ -36,6 +36,7 @@ class ParticleScene: SKScene {
 struct FinishGameView: View {
     @State private var navigateToHome = false
     var score: Int
+    var gameType: Int
     
     var body: some View {
         
@@ -75,7 +76,12 @@ struct FinishGameView: View {
                     
                     NavigationLink("Restart")
                     {
-                        BirdHuntView()
+                        if gameType == 0 {
+                            BirdHuntView()
+                        }
+                        else {
+                            DanuView()
+                        }
                     }
                     .font(.headline)
                     .fontWeight(.bold)
@@ -105,6 +111,6 @@ struct FinishGameView: View {
 
 struct FinishGameView_Previews: PreviewProvider {
     static var previews: some View {
-        FinishGameView(score: 0)
+        FinishGameView(score: 0, gameType: 0)
     }
 }

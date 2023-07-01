@@ -26,7 +26,7 @@ struct BirdHuntView: View {
                     }
                 
                 if scene.gameOver == true {
-                    FinishGameView(score: scene.score)
+                    FinishGameView(score: scene.score, gameType: 0)
                 }
             }
             

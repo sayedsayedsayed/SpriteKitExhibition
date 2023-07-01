@@ -22,6 +22,7 @@ struct NewGameView: View {
                         .overlay(
                             NavigationLink("Bird Hunt"){
                                 BirdHuntView()
+                                
                             }
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
