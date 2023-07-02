@@ -25,3 +25,15 @@ extension View {
         clipShape( RoundedCorner(radius: radius, corners: corners) )
     }
 }
+
+class PortraitHostingController<Content>: UIHostingController<Content> where Content: View {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+}
+
+class LandscapeHostingController<Content>: UIHostingController<Content> where Content: View {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+}

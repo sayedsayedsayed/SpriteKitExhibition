@@ -11,8 +11,9 @@ import SwiftUI
 struct SpriteKitExhibitionApp: App {
     var body: some Scene {
         WindowGroup {
+            NewGameView()
 //            ContentView()
-            BirdHuntView()
+//            BirdHuntView()
 //            DanuView()
 //                .previewInterfaceOrientation(.landscapeLeft)
 //                .onAppear {
