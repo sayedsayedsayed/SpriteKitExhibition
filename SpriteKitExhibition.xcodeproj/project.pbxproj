@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		439887F02A51CF4200F260F8 /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 439887EF2A51CF4200F260F8 /* coin.mp3 */; };
+		439887F22A51CFE900F260F8 /* winning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 439887F12A51CFE900F260F8 /* winning.mp3 */; };
+		439887F42A51DF0F00F260F8 /* ranjau.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 439887F32A51DF0F00F260F8 /* ranjau.mp3 */; };
 		EC39E8682A50A80700EF6B97 /* birdHunt-BGM.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC39E8662A50A80700EF6B97 /* birdHunt-BGM.wav */; };
 		EC39E8692A50A80700EF6B97 /* onboarding-BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC39E8672A50A80700EF6B97 /* onboarding-BGM.mp3 */; };
 		EC39E86B2A50A83100EF6B97 /* game-over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC39E86A2A50A83100EF6B97 /* game-over.mp3 */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		439887EF2A51CF4200F260F8 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
+		439887F12A51CFE900F260F8 /* winning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winning.mp3; sourceTree = "<group>"; };
+		439887F32A51DF0F00F260F8 /* ranjau.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ranjau.mp3; sourceTree = "<group>"; };
 		EC39E8662A50A80700EF6B97 /* birdHunt-BGM.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "birdHunt-BGM.wav"; sourceTree = "<group>"; };
 		EC39E8672A50A80700EF6B97 /* onboarding-BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "onboarding-BGM.mp3"; sourceTree = "<group>"; };
 		EC39E86A2A50A83100EF6B97 /* game-over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game-over.mp3"; sourceTree = "<group>"; };
@@ -63,7 +69,10 @@
 		EC39E8652A50A7BD00EF6B97 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				439887F32A51DF0F00F260F8 /* ranjau.mp3 */,
 				EC39E86C2A50A84F00EF6B97 /* gunshot.mp3 */,
+				439887F12A51CFE900F260F8 /* winning.mp3 */,
+				439887EF2A51CF4200F260F8 /* coin.mp3 */,
 				EC39E86A2A50A83100EF6B97 /* game-over.mp3 */,
 				EC39E8662A50A80700EF6B97 /* birdHunt-BGM.wav */,
 				EC39E8672A50A80700EF6B97 /* onboarding-BGM.mp3 */,
@@ -201,12 +210,15 @@
 			files = (
 				EC39E8692A50A80700EF6B97 /* onboarding-BGM.mp3 in Resources */,
 				EC39E86D2A50A84F00EF6B97 /* gunshot.mp3 in Resources */,
+				439887F02A51CF4200F260F8 /* coin.mp3 in Resources */,
 				EC39E8682A50A80700EF6B97 /* birdHunt-BGM.wav in Resources */,
 				EC4748582A505F0E001D23AD /* Preview Assets.xcassets in Resources */,
+				439887F42A51DF0F00F260F8 /* ranjau.mp3 in Resources */,
 				EC4748552A505F0E001D23AD /* Assets.xcassets in Resources */,
 				EC39E86B2A50A83100EF6B97 /* game-over.mp3 in Resources */,
 				EC47486A2A506205001D23AD /* FireExplosion.sks in Resources */,
 				EC47486F2A506352001D23AD /* MyParticle.sks in Resources */,
+				439887F22A51CFE900F260F8 /* winning.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

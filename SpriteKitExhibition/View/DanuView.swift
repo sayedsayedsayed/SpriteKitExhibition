@@ -11,26 +11,53 @@ import GameController
 
 struct DanuView: View {
     
-    var scene = DanuGameScene()
-    
-    
+    @ObservedObject var scene = DanuGameScene()
+    @State private var isFinish = false
     
     var body: some View {
         
-        VStack{
-            SpriteView(scene: scene)
-                .ignoresSafeArea()
+        NavigationStack {
+            ZStack{
+                Image("coin2")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .position(x: 20, y: 40)
+                    .zIndex(10)
+                
+                Text("\(String(scene.score))")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .position(x: 70, y: 42)
+                    .zIndex(10)
+                
+                Image("heart")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .position(x: 160, y: 40)
+                    .zIndex(10)
+                
+                Text("\(String(scene.life))")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .position(x: 210, y: 42)
+                    .zIndex(10)
+                SpriteView(scene: scene)
+                    .ignoresSafeArea()
+                
+                    .onReceive(scene.$isFinish) { newValue in
+                        
+                        isFinish = newValue
+//                        dismiss()
+                    }
+                    .navigationDestination(isPresented: $isFinish) {
+                        NewGameView()
+                    }
+            }
         }
         
         
     }
     
-}
-
-class HostingController<Content>: UIHostingController<Content> where Content: View {
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscape
-    }
 }
 
 struct DanuView_Previews: PreviewProvider {

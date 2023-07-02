@@ -22,7 +22,10 @@ struct NewGameView: View {
                         .overlay(
                             NavigationLink("Bird Hunt"){
                                 BirdHuntView()
-                                
+                                    .onAppear {
+                                    let hostingController = PortraitHostingController(rootView: BirdHuntView())
+                                    UIApplication.shared.windows.first?.rootViewController = hostingController
+                                }
                             }
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
@@ -36,9 +39,9 @@ struct NewGameView: View {
                             NavigationLink("Asadi"){
                                 DanuView()
                                     .onAppear {
-//                                        let hostingController = HostingController(rootView: DanuView())
-//                                        UIApplication.shared.windows.first?.rootViewController = hostingController
-                                    }
+                                    let hostingController = LandscapeHostingController(rootView: DanuView())
+                                    UIApplication.shared.windows.first?.rootViewController = hostingController
+                                }
                             }
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
