@@ -376,8 +376,8 @@ class DanuGameScene : SKScene, SKPhysicsContactDelegate, ObservableObject {
             let nextPosX = charDanu.position.x + 5
             if nextPosX + charDanu.size.width / 2 < (background1.size.width * 3) { // Check that Danu will be within the right bound
                 charDanu.position.x = nextPosX
-                print("x: \(charDanu.position.x)")
-                print("y: \(charDanu.position.y)")
+//                print("x: \(charDanu.position.x)")
+//                print("y: \(charDanu.position.y)")
             }
             //            charDanu.position.x += 5
         }
@@ -386,8 +386,8 @@ class DanuGameScene : SKScene, SKPhysicsContactDelegate, ObservableObject {
             let nextPosX = charDanu.position.x - 5
             if nextPosX - charDanu.size.width / 2 > 0 { // Check that Danu will be within the left bound
                 charDanu.position.x = nextPosX
-                print("x: \(charDanu.position.x)")
-                print("y: \(charDanu.position.y)")
+//                print("x: \(charDanu.position.x)")
+//                print("y: \(charDanu.position.y)")
             }
             //            charDanu.position.x -= 5
         }

@@ -36,7 +36,7 @@ struct NewGameView: View {
                         .frame(width: 400, height: 100.0)
                         .scaledToFit()
                         .overlay(
-                            NavigationLink("Asadi"){
+                            NavigationLink("Jump Danu Jump!"){
                                 DanuView()
                                     .onAppear {
                                     let hostingController = LandscapeHostingController(rootView: DanuView())
